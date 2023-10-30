@@ -1,16 +1,14 @@
 * {
   color: #364958;
   box-sizing: border-box;
-  /* border: 1px solid red; */
 }
 body {
   font-family: "Roboto", sans-serif;
   background-color: #e7e7e7;
 }
-
+/* start navebar */
 .navbar {
   background-color: #87bba2 !important;
-  /* height: 100px; */
   width: 100%;
   position: fixed;
   top: 0;
@@ -38,7 +36,6 @@ body {
 }
 /* end nav  */
 /* start sidebar */
-
 .sidbare {
   border: 1px solid none;
   background-color: #87bba2;
@@ -47,7 +44,6 @@ body {
   width: 18rem;
   height: fit-content;
   z-index: 99;
-
   height: 100vh;
 }
 .copy_right p {
@@ -66,7 +62,6 @@ main {
   width: calc(100% - 18rem) !important;
   padding: 0 5rem;
 }
-
 .search_team input {
   width: 10rem;
   height: 28px;
@@ -100,9 +95,4 @@ main {
   .navbar-expand .navbar-collapse {
     justify-content: flex-end !important;
   }
-}
-#mb {
-  background-color: red;
-  width: 100px;
-  height: 1000px;
 }
