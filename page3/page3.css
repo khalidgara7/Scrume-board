@@ -1,0 +1,98 @@
+* {
+  color: #364958;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #e7e7e7;
+}
+/* start navebar */
+.navbar {
+  background-color: #87bba2 !important;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+.scrum-logo {
+  width: 6rem;
+  height: 3.2rem;
+}
+.dropdwon-search {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-link {
+  color: #364958;
+}
+.form-control {
+  width: 50%;
+  background-color: #e7e7e7;
+  border-radius: 11px;
+}
+.nav-dropdown {
+  margin-left: 17%;
+  align-self: flex-end;
+}
+/* end nav  */
+/* start sidebar */
+.sidbare {
+  border: 1px solid none;
+  background-color: #87bba2;
+  color: #364958;
+  top: 74px !important;
+  width: 18rem;
+  height: fit-content;
+  z-index: 99;
+  height: 100vh;
+}
+.copy_right p {
+  margin-top: 112px;
+  font-size: 0.65rem;
+  text-align: center;
+}
+.copy_right {
+  margin-top: 157px !important;
+}
+/* end sidebar */
+/* start sectionup */
+main {
+  margin-left: 18rem;
+  margin-top: 100px !important;
+  width: calc(100% - 18rem) !important;
+  padding: 0 5rem;
+}
+.search_team input {
+  width: 10rem;
+  height: 28px;
+}
+/* end sectionup */
+/* start main section */
+.sprint {
+  background-color: #c9e4ca;
+  color: #364958;
+  border: none;
+}
+.sprint:hover,
+.sprint:focus,
+.sprint:link,
+.sprint.active {
+  background-color: #87bba2;
+}
+@media (max-width: 768px) {
+  main {
+    margin-left: 0;
+    width: 100% !important;
+  }
+  .nav-dropdown {
+    margin: 0;
+  }
+}
+@media (max-width: 500px) {
+  .nav-dropdown {
+    display: none;
+  }
+  .navbar-expand .navbar-collapse {
+    justify-content: flex-end !important;
+  }
+}
