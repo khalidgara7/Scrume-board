@@ -79,6 +79,60 @@ main {
 .sprint.active {
   background-color: #87bba2;
 }
+
+.table_fixe{
+  position: relative;
+  
+}
+.start_sprint{
+  width: 100%;
+  display: table;
+  justify-content: center;
+  text-align: center;
+  overflow-x: scroll;
+  overflow: hidden;
+  white-space: nowrap ;
+}
+
+.table_sprint{
+  position :absolute;
+  transform: translate(-40%, -50%);
+  z-index: 1;
+  left: 225%;
+  top: 60%;
+  width: 60%;
+  height: 30rem;
+  background-color: #fdfefd;
+  align-items: center;
+  border: 2px solid black;  
+
+}
+.scop_vide{
+  background-color: #87bba2;
+  text-align: center;
+  height: 1rem;
+  
+}
+#jours{
+  width: 200px;
+  height: 10px;
+  overflow-x: scroll;
+  overflow: hidden;
+  white-space: nowrap ;
+  border: 2px solid black; 
+  
+}
+th td{
+  padding: 1rem;
+  
+}
+table_fixe{
+  
+}
+
+
+
+
 @media (max-width: 768px) {
   main {
     margin-left: 0;
