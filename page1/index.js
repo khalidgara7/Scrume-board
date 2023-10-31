@@ -5,7 +5,7 @@ let task = document.querySelectorAll(".task");
 var drag=null;
 btn.onclick = function() {
     if (input.value !== '') {
-        box[0].innerHTML += `
+        boxs[0].innerHTML += `
             <div class="task tasktext" draggable="true">
                 ${input.value}
             </div>`;
