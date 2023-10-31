@@ -93,7 +93,7 @@
     border-radius: 5px;
   }
   .inp {
-    width: 401px;
+    width: 50%;
   height: 48px;
     border-radius: 5px;
     background: #fff;
@@ -105,8 +105,13 @@
   }
   
   .container {
+    min-width: 375px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
+  }
+  .box{
+    margin-bottom: 20px;
   }
   .box1 {
     display: flex;
