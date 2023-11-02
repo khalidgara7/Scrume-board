@@ -116,10 +116,6 @@ let sprint = ` <div class="border_of_tascks col-12 col-lg-10 ">
 </div>`;
 CreatSprintBtn.onclick = function() {
   CreatSprintBtn.insertAdjacentHTML("beforebegin", sprint);
-  // document.body.section.append("sprint);
 }
 
-// let xx=document.querySelector(".border_of_tascks");
-// document.body.(xx)
-// inserthtmladjacent
-//
+
