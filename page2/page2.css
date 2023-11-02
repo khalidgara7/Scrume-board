@@ -79,6 +79,28 @@ main {
 .sprint.active {
   background-color: #87bba2;
 }
+.BorderDeTask{
+  max-height: 2rem;
+  overflow: hidden;
+}
+.imag-task,.hwo_write_task{
+  max-width: 1.4rem;
+}
+.demarer-sprint{
+  background-color: #D9D9D9;
+  border: none;
+  right: 0;
+  top: 2px;
+  font-size: small;
+}
+.list_de_task li{
+  list-style: none;
+}
+/* creat task btn */
+.CreatATask-Btn{
+  background-color: #D9D9D9;
+  border: none;
+}
 @media (max-width: 768px) {
   main {
     margin-left: 0;
