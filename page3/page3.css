@@ -1,0 +1,173 @@
+* {
+  color: #364958;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #e7e7e7;
+}
+/* start navebar */
+.navbar {
+  background-color: #87bba2 !important;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+.scrum-logo {
+  width: 6rem;
+  height: 3.2rem;
+}
+.dropdwon-search {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-link {
+  color: #364958;
+}
+.form-control {
+  width: 50%;
+  background-color: #e7e7e7;
+  border-radius: 11px;
+}
+.nav-dropdown {
+  margin-left: 17%;
+  align-self: flex-end;
+}
+/* end nav  */
+/* start sidebar */
+.sidbare {
+  border: 1px solid none;
+  background-color: #87bba2;
+  color: #364958;
+  top: 74px !important;
+  width: 18rem;
+  height: fit-content;
+  z-index: 99;
+  height: 100vh;
+}
+.copy_right p {
+  margin-top: 112px;
+  font-size: 0.65rem;
+  text-align: center;
+}
+.copy_right {
+  margin-top: 157px !important;
+}
+/* end sidebar */
+/* start sectionup */
+main {
+  margin-left: 18rem;
+  margin-top: 100px !important;
+  width: calc(100% - 18rem) !important;
+  padding: 0 5rem;
+}
+.search_team input {
+  width: 10rem;
+  height: 28px;
+}
+/* end sectionup */
+/* start main section */
+.sprint {
+  background-color: #c9e4ca;
+  color: #364958;
+  border: none;
+}
+.sprint:hover,
+.sprint:focus,
+.sprint:link,
+.sprint.active {
+  background-color: #87bba2;
+}
+
+.table_sprint{
+  overflow-x: scroll;
+  width: 100vw;
+}
+.start_sprint{
+  width: 100%;
+  /* display: table; */
+  justify-content: center;
+  text-align: center;
+  /* overflow-x: scroll; */
+  /* overflow: hidden; */
+  white-space: nowrap ;
+}
+
+.table_sprint{
+  height: 20rem;
+  background-color: #fdfefd;
+  align-items: center;
+  /* border: 2px solid black;   */
+  margin-top: 5rem;
+}
+
+.table_sprint td {
+  /* border: 0.5px solid black; */
+  padding: 0 1rem;
+  border: 2px solid #364958;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  
+}
+.table_sprint td:first-child  {
+  border-right:1px solid black;
+}
+
+.table_sprint th {
+  border: 0.5px solid #ffffff;
+}
+
+.table_sprint th:first-child {
+  border-right: 0.5px solid #000000;
+}
+.scop_vide{
+  background-color: #87bba2;
+  text-align: center;
+  height: 0.7rem;
+  word-spacing: 0.7rem;
+  
+}
+.jours{
+  white-space: nowrap ;
+  padding: 0 0.5rem;
+}
+th td{
+  padding: 1rem;
+
+}
+.div_empty_timer{
+  position: absolute;
+  min-width: 50rem;
+  height: 1rem;
+  left: 50%;
+  top: 68.3%;
+  background-color: #364958;
+  border-radius: 0.4rem;
+}
+.premier_row{
+  height: 2rem;
+}
+table {
+  flex-grow: 3;
+  overflow-y: scroll;
+}
+
+@media (max-width: 768px) {
+  main {
+    margin-left: 0;
+    width: 100% !important;
+  }
+  .nav-dropdown {
+    margin: 0;
+  }
+}
+@media (max-width: 500px) {
+  .nav-dropdown {
+    display: none;
+  }
+  .navbar-expand .navbar-collapse {
+    justify-content: flex-end !important;
+  }
+}
