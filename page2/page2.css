@@ -98,8 +98,29 @@ main {
 }
 /* creat task btn */
 .CreatATask-Btn{
-  background-color: #D9D9D9;
+  background-color: #87bba2;
   border: none;
+}
+.btn-primary-1{
+  background-color: #d9d9d9;
+  border-color: #87bba2;
+  color: #364958;
+  border-radius: 0;
+}
+.btn-primary:hover,
+.btn-primary:focus{
+  background-color: #d9d9d9;
+  box-shadow: 0px 2px 11px 0px #87bba2 !important;
+    border: none !important;
+    color: #364958;
+}
+.btn-primary:focus{
+  
+  box-shadow:none !important;
+}
+/* creat sprint btn */
+.CreatASprint-Btn{
+  
 }
 @media (max-width: 768px) {
   main {

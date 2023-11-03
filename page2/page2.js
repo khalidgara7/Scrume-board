@@ -6,9 +6,6 @@ let CreatTaskBtn = document.querySelector(".CreatATask-Btn");
 let CreatSprintBtn = document.querySelector(".CreatASprint-Btn");
 let border_of_tascks = document.querySelector(".border_of_tascks");
 let all=document.querySelector(".border_of_tascks");
-console.log(all);
-// let sprint_parent = document.querySelector(".sprint_parent");
-// sprint dropdown
 svg90.style.display = "none";
 svg.style.display = "block";
 function hid_accs() {
@@ -22,27 +19,43 @@ function hid_accs() {
     svg.style.display = "none";
   }
 }
-// start creat a task on sprint
-let task = `<button class="bg-white w-100 p-1 d-flex BorderDeTask">
-  <img src="picturs/taskk.png" class="imag-task me-2" alt="task">
-  <p class="task m-0">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Temporibus quidem eligendi sit aliquam veniam ex voluptatum
-    saepe rem quos nulla minus blanditiis maxime, molestias modi
-    unde similique. Culpa, fugit consectetur.
-  </p>
+//start creat a task on sprint
+// function displayStory() {
+//   // var name = document.querySelector(".input-name");
+//   var UserStory = document.getElementById('input-user-story').value;
+//   var StoryContet = document.querySelector('#StoryContent');
+//     document.StoryContet.innerHTML = UserStory;
+// } 
+// var contentt = StoryContet.value;
+// console.log(contentt);
 
-  <select name="afair" class="w-25" id="">
-    <option value="afair">afair</option>
-    <option value="afair">encour</option>
-    <option value="terminer">terminer</option>
-  </select>
-  <img src="picturs/hwo write task.png" class="hwo_write_task ms-2" alt="">
-</button>`;
+    
+// let task = `<button class="bg-white w-100 p-1 d-flex BorderDeTask">
+//   <img src="picturs/taskk.png" class="imag-task me-2" alt="task">
+//   <p class="task m-0">
+//   ${contentt}
+//   </p>
 
+//   <select name="afair" class="w-25" id="">
+//     <option value="afair">afair</option>
+//     <option value="afair">encour</option>
+//     <option value="terminer">terminer</option>
+//   </select>
+//   <img src="picturs/hwo write task.png" class="hwo_write_task ms-2" alt="">
+// </button>`;
+
+var UserStory = document.getElementById('input-user-story');
+var StoryContet = document.querySelector('#StoryContent');
+function displayStory() {
+  StoryContet.textContent = UserStory.value;
+}
+UserStory.addEventListener('keyup', displayStory);
+           
 CreatTaskBtn.onclick = function () {
   listt.insertAdjacentHTML("beforeend", task);
 };
+
+// ______________
 let sprint = ` <div class="border_of_tascks col-12 col-lg-10 ">
 <div class="w-100 position-relative sprint_parent">
  <button
@@ -117,5 +130,3 @@ let sprint = ` <div class="border_of_tascks col-12 col-lg-10 ">
 CreatSprintBtn.onclick = function() {
   CreatSprintBtn.insertAdjacentHTML("beforebegin", sprint);
 }
-
-
