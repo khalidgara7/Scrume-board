@@ -6,6 +6,12 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: #e7e7e7;
 }
+input:hover,input:focus,input:active{
+  box-shadow: 0px 2px 11px 0px #87bba2 !important;
+  border-color: #87bba2 !important;
+
+}
+
 /* start navebar */
 .navbar {
   background-color: #87bba2 !important;
@@ -68,15 +74,15 @@ main {
 }
 /* end sectionup */
 /* start main section */
-.sprint {
+#sprint {
   background-color: #c9e4ca;
   color: #364958;
   border: none;
 }
-.sprint:hover,
-.sprint:focus,
-.sprint:link,
-.sprint.active {
+#sprint:hover,
+#sprint:focus,
+#sprint:link,
+#sprint.active {
   background-color: #87bba2;
 }
 .BorderDeTask{
@@ -120,7 +126,19 @@ main {
 }
 /* creat sprint btn */
 .CreatASprint-Btn{
-  
+  background-color: #d9d9d9;
+  color: #364958;
+  border: none;
+  border-radius: 5px;
+  text-align: center !important;
+}
+.CreatASprint-Btn:hover,
+.CreatASprint-Btn:focus{
+  background-color: #d9d9d9;
+  box-shadow: 0px 2px 11px 0px #87bba2 !important;
+    border: none !important;
+    color: #364958;
+   
 }
 @media (max-width: 768px) {
   main {
