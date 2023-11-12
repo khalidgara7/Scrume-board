@@ -88,8 +88,17 @@ main {
 .BorderDeTask{
   max-height: 2rem;
   overflow: hidden;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+ border-bottom: 1px solid #87bba2;
+
 }
-.imag-task,.hwo_write_task{
+#CreatASprint-Btn{
+  background-color: #d9d9d9;
+  border: none;
+}
+.imag-task,.who_write_task{
   max-width: 1.4rem;
 }
 .demarer-sprint{
@@ -102,6 +111,14 @@ main {
 .list_de_task li{
   list-style: none;
 }
+.select_img{
+  position: absolute;
+  right: 3rem;
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+
 /* creat task btn */
 .CreatATask-Btn{
   background-color: #87bba2;

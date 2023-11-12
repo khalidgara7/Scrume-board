@@ -17,22 +17,21 @@ function hid_accs() {
 }
 // put the value of the modal input in variabls
 // get the inputs
-let userName = document.querySelector(".inputName");
-let userStory = document.querySelector(".textarea-input");
-let btnTask = document.querySelector(".CreatATask-Btn");
-let userStoryContent;
-let UNam;
+var userName = document.querySelector(".inputName");
+var userStory = document.querySelector(".textarea-input");
+var btnTask = document.querySelector(".CreatATask-Btn");
+var userStoryContent;
+var UNam;
 //............................................CREAT TASKS
 // get the parent of tasks
-let taskParent = document.querySelector(".list_de_task");
+var taskParent = document.querySelector(".list_de_task");
 // creat task function
-let i=0;
 
 btnTask.onclick = function () {
   if (userStory.value !== "" && userName.value !== "") {
     UNam = userName.value;
     userStoryContent = userStory.value;
-    taskParent.innerHTML += `<button class="bg-white w-100 p-1 d-flex BorderDeTask">
+    taskParent.innerHTML += ` <button class="bg-white w-100 p-1 d-flex BorderDeTask" onclick="aff()">
     <img
       src="picturs/taskk.png"
       class="imag-task me-2"
@@ -41,26 +40,39 @@ btnTask.onclick = function () {
     <p class="task m-0">
     ${userStoryContent}
     </p>
-    <select name="afair" class="w-25" id="">
-      <option value="afair">afair</option>
-      <option value="afair">encour</option>
-      <option value="terminer">terminer</option>
-    </select>
-    <img
-      src="picturs/hwo write task.png"
-      class="hwo_write_task ms-2"
-      alt=""
-    />
+    <div class="select_img">
+      <select name="afair" class="w-100" id="">
+        <option value="afair">TO DO</option>
+        <option value="afair">DOING</option>
+        <option value="terminer">DONE</option>
+      </select>
+      <img
+        src="picturs/hwo write task.png"
+        class="who_write_task ms-2"
+        alt=""
+      />
+    </div>
     </button>`;
     userStory.value = "";
     userName.value = "";
   }
 };
+var btnContent = document.querySelectorAll(".BorderDeTask");
+function aff() {
+  btnContent.forEach((Element, index) => {
+    this.Element.style.backgroundColor = "red";
+  });
+}
+// btnContent.forEach((elem, index) => {
+//   btnContent.addEventListener("click", function (e) {
+//     console.log(`-${elem}-${index}`);
+//   });
+// });
 //............................................CREAT SPRINTS
 // craet a New Sprins
 // get the creat sprint btn
-let btnSprint = document.getElementById("CreatASprint-Btn");
-let sprint = ` <div class="border_of_tasks col-12 col-lg-10">
+var btnSprint = document.getElementById("CreatASprint-Btn");
+var sprint = ` <div class="border_of_tasks col-12 col-lg-10">
 <div class="w-100 position-relative sprint_parent">
   <button
     class=" w-100 text-start d-flex align-items-center" id="sprint"
@@ -180,5 +192,5 @@ let sprint = ` <div class="border_of_tasks col-12 col-lg-10">
 </div>`;
 btnSprint.onclick = function () {
   btnSprint.insertAdjacentHTML("beforebegin", sprint);
-  i++;
+
 };
