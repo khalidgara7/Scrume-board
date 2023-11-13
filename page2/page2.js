@@ -31,7 +31,7 @@ btnTask.onclick = function () {
   if (userStory.value !== "" && userName.value !== "") {
     UNam = userName.value;
     userStoryContent = userStory.value;
-    taskParent.innerHTML += ` <button class="bg-white w-100 p-1 d-flex BorderDeTask" onclick="aff()">
+    taskParent.innerHTML += ` <button class="bg-white w-100 p-1 d-flex BorderDeTask position-relative" onclick="aff()">
     <img
       src="picturs/taskk.png"
       class="imag-task me-2"
