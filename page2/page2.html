@@ -3,15 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/all.min.css" />
-    <link rel="stylesheet" href="page3.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="page2.css" />
     <title>scrambord</title>
   </head>
   <body>
@@ -19,15 +28,15 @@
     <nav class="navbar navbar-expand">
       <div class="container-fluid">
         <!-- logo  -->
-        <a class="navbar-brand" href="#"
+        <a class="navbar-brand" href="/page1/index.html"
           ><img src="picturs/logo.png" class="scrum-logo" alt=""
         /></a>
-        
+
         <div
           class="collapse navbar-collapse dropdwon-search"
           id="navbarSupportedContent"
         >
-        <!-- team and project -->
+          <!-- team and project -->
           <ul class="navbar-nav mb-0 nav-dropdown">
             <li class="nav-item me-4">
               <a
@@ -94,7 +103,7 @@
                 </clipPath>
               </defs>
             </svg>
-           <!-- search input -->
+            <!-- search input -->
             <input
               class="form-control d-none d-lg-block d-md-block"
               type="search"
@@ -146,7 +155,7 @@
         </div>
       </div>
     </nav>
-    <!-- sidebar + main -->
+    <!-- sidebar+main -->
     <div class="main_side mw-100 row">
       <!-- sidebar -->
       <section
@@ -179,16 +188,35 @@
               <li class="list-unstyled">chronologie</li>
             </div>
             <div class="d-flex gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 40 40" fill="none">
-                <path d="M37.1429 9.07143H37.6429V8.57143V2.85714V2.35714H37.1429H2.85714H2.35714V2.85714V8.57143V9.07143H2.85714H37.1429ZM11.4286 16.6429H10.9286V17.1429V22.8571V23.3571H11.4286H37.1429H37.6429V22.8571V17.1429V16.6429H37.1429H11.4286ZM2.85714 30.9286H2.35714V31.4286V37.1429V37.6429H2.85714H37.1429H37.6429V37.1429V31.4286V30.9286H37.1429H2.85714ZM0.5 0.5H39.5V10.9286H0.5V0.5ZM9.07143 25.2143V14.7857H39.5V25.2143H9.07143ZM0.5 39.5V29.0714H39.5V39.5H0.5Z" fill="#364958" stroke="#364958"/>
-                </svg>
+              <svg
+                width="25"
+                height="25"
+                viewBox="0 0 40 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M37.1429 9.07143H37.6429V8.57143V2.85714V2.35714H37.1429H2.85714H2.35714V2.85714V8.57143V9.07143H2.85714H37.1429ZM11.4286 16.6429H10.9286V17.1429V22.8571V23.3571H11.4286H37.1429H37.6429V22.8571V17.1429V16.6429H37.1429H11.4286ZM2.85714 30.9286H2.35714V31.4286V37.1429V37.6429H2.85714H37.1429H37.6429V37.1429V31.4286V30.9286H37.1429H2.85714ZM0.5 0.5H39.5V10.9286H0.5V0.5ZM9.07143 25.2143V14.7857H39.5V25.2143H9.07143ZM0.5 39.5V29.0714H39.5V39.5H0.5Z"
+                  fill="#364958"
+                  stroke="#364958"
+                />
+              </svg>
 
               <li class="list-unstyled">backlog</li>
             </div>
             <div class="d-flex gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" viewBox="0 0 41 36" fill="none">
-                <path d="M40.0217 31.3425L40.1796 4.12076C40.192 1.9819 38.2022 0.220335 35.7578 0.20616L4.64719 0.025743C2.20279 0.0115674 0.192672 1.74994 0.180269 3.88879L0.022404 31.1106C0.0100003 33.2494 1.99982 35.011 4.44422 35.0252L35.5548 35.2056C37.9992 35.2197 40.0093 33.4814 40.0217 31.3425ZM35.5774 31.3167L28.9108 31.2781L29.0687 4.05632L35.7352 4.09498L35.5774 31.3167ZM24.4664 31.2523L15.5777 31.2008L15.7356 3.979L24.6243 4.03055L24.4664 31.2523ZM4.62464 3.91457L11.2912 3.95323L11.1333 31.175L4.46677 31.1363L4.62464 3.91457Z" fill="#364958"/>
-                </svg>
+              <svg
+                width="25"
+                height="20"
+                viewBox="0 0 41 36"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M40.0217 31.3425L40.1796 4.12076C40.192 1.9819 38.2022 0.220335 35.7578 0.20616L4.64719 0.025743C2.20279 0.0115674 0.19267 1.74994 0.180267 3.88879L0.0224021 31.1106C0.00999843 33.2494 1.99982 35.011 4.44422 35.0252L35.5548 35.2056C37.9992 35.2197 40.0093 33.4814 40.0217 31.3425ZM35.5774 31.3167L28.9108 31.2781L29.0687 4.05632L35.7352 4.09498L35.5774 31.3167ZM24.4664 31.2523L15.5777 31.2008L15.7356 3.979L24.6243 4.03055L24.4664 31.2523ZM4.62464 3.91457L11.2912 3.95323L11.1333 31.175L4.46677 31.1363L4.62464 3.91457Z"
+                  fill="#364958"
+                />
+              </svg>
 
               <li class="list-unstyled">tableau</li>
             </div>
@@ -198,16 +226,44 @@
           <h3 class="fs-6 mt-4 mb-4">devlopment</h3>
           <ul class="list-group d-flex flex-colomun gap-3">
             <div class="d-flex gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="28" viewBox="0 0 27 31" fill="none">
-                <path d="M7.25 12.6H19.75M7.25 24.2H19.75M7.25 18.4H13.5M1 29.13V1.87C1 1.63926 1.09877 1.41797 1.27459 1.25482C1.4504 1.09166 1.68886 1 1.9375 1H20.1437C20.3923 1.0002 20.6306 1.092 20.8062 1.2552L25.725 5.8198C25.8124 5.90085 25.8818 5.99716 25.929 6.10317C25.9762 6.20918 26.0003 6.3228 26 6.4375V29.13C26 29.2443 25.9757 29.3574 25.9286 29.4629C25.8815 29.5685 25.8125 29.6644 25.7254 29.7452C25.6384 29.826 25.535 29.8901 25.4213 29.9338C25.3075 29.9775 25.1856 30 25.0625 30H1.9375C1.81439 30 1.69248 29.9775 1.57873 29.9338C1.46499 29.8901 1.36164 29.826 1.27459 29.7452C1.18753 29.6644 1.11848 29.5685 1.07136 29.4629C1.02425 29.3574 1 29.2443 1 29.13Z" stroke="#364958" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M19.75 1V5.93C19.75 6.16074 19.8488 6.38203 20.0246 6.54518C20.2004 6.70834 20.4389 6.8 20.6875 6.8H26" stroke="#364958" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+              <svg
+                width="25"
+                height="28"
+                viewBox="0 0 27 31"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.25 12.6H19.75M7.25 24.2H19.75M7.25 18.4H13.5M1 29.13V1.87C1 1.63926 1.09877 1.41797 1.27459 1.25482C1.4504 1.09166 1.68886 1 1.9375 1H20.1437C20.3923 1.0002 20.6306 1.092 20.8062 1.2552L25.725 5.8198C25.8124 5.90085 25.8818 5.99716 25.929 6.10317C25.9762 6.20918 26.0003 6.3228 26 6.4375V29.13C26 29.2443 25.9757 29.3574 25.9286 29.4629C25.8815 29.5685 25.8125 29.6644 25.7254 29.7452C25.6384 29.826 25.535 29.8901 25.4213 29.9338C25.3075 29.9775 25.1856 30 25.0625 30H1.9375C1.81439 30 1.69248 29.9775 1.57873 29.9338C1.46499 29.8901 1.36164 29.826 1.27459 29.7452C1.18753 29.6644 1.11848 29.5685 1.07136 29.4629C1.02425 29.3574 1 29.2443 1 29.13Z"
+                  stroke="#364958"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M19.75 1V5.93C19.75 6.16074 19.8488 6.38203 20.0246 6.54518C20.2004 6.70834 20.4389 6.8 20.6875 6.8H26"
+                  stroke="#364958"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
               <li class="list-unstyled">Page de project</li>
             </div>
             <div class="d-flex gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="28" viewBox="0 0 35 42" fill="none">
-                <path d="M29.6154 34.125H35V36.75H29.6154V42H26.9231V36.75H21.5385V34.125H26.9231V28.875H29.6154V34.125ZM2.69231 2.625V34.125H18.8462V36.75H0V0H18.0679L29.6154 11.2588V26.25H26.9231V13.125H16.1538V2.625H2.69231ZM18.8462 4.49121V10.5H25.009L18.8462 4.49121Z" fill="#364958"/>
-                </svg>
+              <svg
+                width="25"
+                height="28"
+                viewBox="0 0 35 42"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M29.6154 34.125H35V36.75H29.6154V42H26.9231V36.75H21.5385V34.125H26.9231V28.875H29.6154V34.125ZM2.69231 2.625V34.125H18.8462V36.75H0V0H18.0679L29.6154 11.2588V26.25H26.9231V13.125H16.1538V2.625H2.69231ZM18.8462 4.49121V10.5H25.009L18.8462 4.49121Z"
+                  fill="#364958"
+                />
+              </svg>
 
               <li class="list-unstyled">ajoute a reucci</li>
             </div>
@@ -233,16 +289,14 @@
           <p>Vous faites partie d'un projet géré par l'équipe En savoir plus</p>
         </div>
       </section>
-   <!-- main -->
+      <!-- main -->
       <main class="col-lg-10 col-md-10 col-sm-12">
-         <section
-          class="row col-12 d-flex justify-content-center gap-5 m-auto"
-         >
-         <!-- search+team accs -->
+        <section class="row col-12 d-flex justify-content-center gap-5 m-auto">
+          <!-- search+team accs -->
           <div
             class="search_team col-12 col-lg-10 d-flex align-items-center gap-1 mw-100"
           >
-          <!-- search -->
+            <!-- search -->
             <input
               class="form-control bg-white"
               type="search"
@@ -316,131 +370,135 @@
             </svg>
           </div>
           <!-- start tableau de sprint -->
-          <div class="start_sprint">
-            <table class="table_sprint">
-              
-              <div class="table_fixe">
-                <tr class="scop_vide">
-                  <th></th>
-                  <th ><span >janvier</span> <br> 
-                    <span class="jours">1 2 3 4 5 6 7 8 9 10 
-                      11 12 13 14 15 16 17 18 19 
-                      20 21 22 23 24 25 26 27 28 29 30 31</span>
-                  </th>
-                  <th><span>fevrier</span><br> 
-                    <span class="jours">1 2 3 4 5 6 7 8 9 10 
-                      11 12 13 14 15 16 17 18 19 
-                      20 21 22 23 24 25 26 27 28 29</span>
-                  </th>
-                  <th><span>mars</span><br> 
-                    <span class="jours">1 2 3 4 5 6 7 8 9 10 
-                      11 12 13 14 15 16 17 18 19 
-                      20 21 22 23 24 25 26 27 28 29 30 31</span>
-                  </th>
-                  <th><span>avrile</span><br> 
-                    <span class="jours">1 2 3 4 5 6 7 8 9 10 
-                      11 12 13 14 15 16 17 18 19 
-                      20 21 22 23 24 25 26 27 28 29 30 31</span>
-                  </th>
-                  <th><span>mai</span><br> 
-                    <span class="jours">1 2 3 4 5 6 7 8 9 10 
-                    11 12 13 14 15 16 17 18 19 
-                    20 21 22 23 24 25 26 27 28 29 30 31</span>
-                  </th>
-                  <th><span>juin</span><br> 
-                    <span class="jours">1 2 3 4 5 6 7 8 9 10 
-                      11 12 13 14 15 16 17 18 19 
-                      20 21 22 23 24 25 26 27 28 29 30 31</span>
-                  </th>
-                  <th><span>juillet</span><br> 
-                    <span class="jours">1 2 3 4 5 6 7 8 9 10 
-                      11 12 13 14 15 16 17 18 19 
-                      20 21 22 23 24 25 26 27 28 29 30</span>
-                  </th>
-                  <th><span>aoûte</span><br> 
-                    <span class="jours">1 2 3 4 5 6 7 8 9 10 
-                      11 12 13 14 15 16 17 18 19 
-                      20 21 22 23 24 25 26 27 28 29 30 31</span>
-                  </th>
-                  <th><span>september</span><br> 
-                    <span class="jours">1 2 3 4 5 6 7 8 9 10 
-                      11 12 13 14 15 16 17 18 19 
-                      20 21 22 23 24 25 26 27 28 29 30</span>
-                  </th>
-                  <th><span>october</span><br> 
-                    <span class="jours">1 2 3 4 5 6 7 8 9 10 
-                      11 12 13 14 15 16 17 18 19 
-                      20 21 22 23 24 25 26 27 28 29 30 31</span>
-                  </th>
-                  <th><span>november</span><br> 
-                    <span class="jours">1 2 3 4 5 6 7 8 9 10 
-                      11 12 13 14 15 16 17 18 19 
-                      20 21 22 23 24 25 26 27 28 29 30</span>
-                  </th>
-                  <th><span>december</span><br> 
-                    <span class="jours">1 2 3 4 5 6 7 8 9 10 
-                      11 12 13 14 15 16 17 18 19 
-                      20 21 22 23 24 25 26 27 28 29 30 31</span>
-                  </th>
-                </tr>
+
+          <div class="border_of_tasks col-12 col-lg-10">
+            <div class="w-100 position-relative sprint_parent">
+              <button
+                class=" w-100 text-start d-flex align-items-center" id="sprint"
+                onclick="hid_accs()"
+              >
+                <span>
+                  <svg
+                    class="dropdownsvg me-1"
+                    width="12"
+                    height="12"
+                    viewBox="0 0 16 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 11.4L0 2.15676L1.86667 0L8 7.08649L14.1333 0L16 2.15676L8 11.4Z"
+                      fill="black"
+                    />
+                  </svg>
+                  <svg
+                    class="dropdownsvg90 me-1"
+                    width="12"
+                    height="12"
+                    viewBox="0 0 12 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11.8031 8.58562L2.1538 16.0909L0.0976938 14.1139L7.49546 8.35987L0.739682 1.86406L2.99118 0.11283L11.8031 8.58562Z"
+                      fill="black"
+                    />
+                  </svg>
+                </span>
+
+                sprint name1 (date)
+              </button>
+              <button class="position-absolute me-2 demarer-sprint">
+                demarer sprint
+              </button>
+            </div>
+            <div class="list_de_task" >
+             
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-primary btn-primary-1 w-100 p-1 d-flex"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              data-bs-whatever="@mdo"
+            >
+              + creat a task
+            </button>
+
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">
+                      New message
+                    </h1>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label"
+                          >Nam:</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control w-100 input-name inputName"
+                          id="recipient-name"
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <label for="message-text" class="col-form-label"
+                          >User Story:</label
+                        >
+                        <textarea
+                          class="form-control w-100 textarea-input"
+                          id="message-text"
+                        ></textarea>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-primary CreatATask-Btn"
+                     
+                    >
+                      creat task
+                    </button>
+                  </div>
+                </div>
               </div>
-              <div class="table_scroll">
-                <tr>
-              <td class="premier_row">sprint</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-             </tr>
-             <tr>
-              <td class="premier_row">création d'une Scrum Board </td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-             </tr>
-             <tr>
-              <td class="premier_row">+ create Epic</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-             </tr>
-              </div>
-            </table>
-            <div class="div_empty_timer"></div>
+            </div>
           </div>
-    </div>
-          
+          <button class="w-25 p-1 " id="CreatASprint-Btn">+ creat a sprint</button>
         </section>
-       
       </main>
     </div>
-    <script src="Scrume-board/js/all.min.js"></script>
-    <script src="Scrume-board/js/bootstrap.bundle.min.js"></script>
+    <script src="page2.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

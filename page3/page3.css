@@ -80,18 +80,33 @@ main {
   background-color: #87bba2;
 }
 
+
+
 .table_sprint{
-  overflow-x: scroll;
+  /* overflow-x: scroll; */
   width: 100vw;
 }
 .start_sprint{
-  width: 100%;
-  /* display: table; */
-  justify-content: center;
-  text-align: center;
-  /* overflow-x: scroll; */
-  /* overflow: hidden; */
+  padding: 0;
+  overflow-x: scroll;
   white-space: nowrap ;
+}
+::-webkit-scrollbar {
+  background-color: white;
+  border-radius: 10px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #87bba2;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #C9E4CA;
+  border-radius: 10px;
 }
 
 .table_sprint{
@@ -99,7 +114,7 @@ main {
   background-color: #fdfefd;
   align-items: center;
   /* border: 2px solid black;   */
-  margin-top: 5rem;
+  margin-top: 1rem;
 }
 
 .table_sprint td {
@@ -111,17 +126,19 @@ main {
   border-right: none;
   
 }
-.table_sprint td:first-child  {
+.table_sprint td:first-child , .table_sprint th:first-child {
   border-right:1px solid black;
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  height: 2rem;
+  background-color: #87bba2;
 }
 
 .table_sprint th {
   border: 0.5px solid #ffffff;
 }
 
-.table_sprint th:first-child {
-  border-right: 0.5px solid #000000;
-}
 .scop_vide{
   background-color: #87bba2;
   text-align: center;
@@ -130,29 +147,51 @@ main {
   
 }
 .jours{
-  white-space: nowrap ;
   padding: 0 0.5rem;
 }
-th td{
-  padding: 1rem;
 
-}
 .div_empty_timer{
   position: absolute;
-  min-width: 50rem;
-  height: 1rem;
+  width: 30rem;
+  height: 2rem;
   left: 50%;
-  top: 68.3%;
+  top: 47%;
   background-color: #364958;
   border-radius: 0.4rem;
+  cursor: move;
 }
-.premier_row{
-  height: 2rem;
+.select_genre_time{
+  background-color: #364958;
+  width: 32rem;
 }
-table {
-  flex-grow: 3;
-  overflow-y: scroll;
+.times_child{
+  border: 2px solid #364958;
 }
+.times_child > td button{
+  background-color: #C9E4CA;
+  width: 10rem;
+}
+.date{
+  width: 10rem;
+}
+a{
+  text-decoration: none;
+  color: #364958;
+}
+
+a:hover{
+  color: blue ;
+}
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 768px) {
   main {
