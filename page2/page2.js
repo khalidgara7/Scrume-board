@@ -1,13 +1,9 @@
-let button_accs = document.querySelector(".sprint");
 let svg = document.querySelector(".dropdownsvg");
 let svg90 = document.querySelector(".dropdownsvg90");
 let listt = document.querySelector(".list_de_task");
-let CreatTaskBtn = document.querySelector(".CreatATask-Btn");
-let CreatSprintBtn = document.querySelector(".CreatASprint-Btn");
-let border_of_tascks = document.querySelector(".border_of_tascks");
-let all=document.querySelector(".border_of_tascks");
 svg90.style.display = "none";
 svg.style.display = "block";
+// this function it's for hideen tasks in the sprint table
 function hid_accs() {
   if (listt.style.display === "none") {
     listt.style.display = "block";
@@ -19,47 +15,67 @@ function hid_accs() {
     svg.style.display = "none";
   }
 }
-//start creat a task on sprint
-// function displayStory() {
-//   // var name = document.querySelector(".input-name");
-//   var UserStory = document.getElementById('input-user-story').value;
-//   var StoryContet = document.querySelector('#StoryContent');
-//     document.StoryContet.innerHTML = UserStory;
-// } 
-// var contentt = StoryContet.value;
-// console.log(contentt);
+// put the value of the modal input in variabls
+// get the inputs
+var userName = document.querySelector(".inputName");
+var userStory = document.querySelector(".textarea-input");
+var btnTask = document.querySelector(".CreatATask-Btn");
+var userStoryContent;
+var UNam;
+//............................................CREAT TASKS
+// get the parent of tasks
+var taskParent = document.querySelector(".list_de_task");
+// creat task function
 
-    
-// let task = `<button class="bg-white w-100 p-1 d-flex BorderDeTask">
-//   <img src="picturs/taskk.png" class="imag-task me-2" alt="task">
-//   <p class="task m-0">
-//   ${contentt}
-//   </p>
-
-//   <select name="afair" class="w-25" id="">
-//     <option value="afair">afair</option>
-//     <option value="afair">encour</option>
-//     <option value="terminer">terminer</option>
-//   </select>
-//   <img src="picturs/hwo write task.png" class="hwo_write_task ms-2" alt="">
-// </button>`;
-
-var UserStory = document.getElementById('input-user-story');
-var StoryContet = document.querySelector('#StoryContent');
-function displayStory() {
-  StoryContet.textContent = UserStory.value;
-}
-UserStory.addEventListener('keyup', displayStory);
-           
-CreatTaskBtn.onclick = function () {
-  listt.insertAdjacentHTML("beforeend", task);
+btnTask.onclick = function () {
+  if (userStory.value !== "" && userName.value !== "") {
+    UNam = userName.value;
+    userStoryContent = userStory.value;
+    taskParent.innerHTML += ` <button class="bg-white w-100 p-1 d-flex BorderDeTask" onclick="aff()">
+    <img
+      src="picturs/taskk.png"
+      class="imag-task me-2"
+      alt="task"
+    />
+    <p class="task m-0">
+    ${userStoryContent}
+    </p>
+    <div class="select_img">
+      <select name="afair" class="w-100" id="">
+        <option value="afair">TO DO</option>
+        <option value="afair">DOING</option>
+        <option value="terminer">DONE</option>
+      </select>
+      <img
+        src="picturs/hwo write task.png"
+        class="who_write_task ms-2"
+        alt=""
+      />
+    </div>
+    </button>`;
+    userStory.value = "";
+    userName.value = "";
+  }
 };
-
-// ______________
-let sprint = ` <div class="border_of_tascks col-12 col-lg-10 ">
+var btnContent = document.querySelectorAll(".BorderDeTask");
+function aff() {
+  btnContent.forEach((Element, index) => {
+    this.Element.style.backgroundColor = "red";
+  });
+}
+// btnContent.forEach((elem, index) => {
+//   btnContent.addEventListener("click", function (e) {
+//     console.log(`-${elem}-${index}`);
+//   });
+// });
+//............................................CREAT SPRINTS
+// craet a New Sprins
+// get the creat sprint btn
+var btnSprint = document.getElementById("CreatASprint-Btn");
+var sprint = ` <div class="border_of_tasks col-12 col-lg-10">
 <div class="w-100 position-relative sprint_parent">
- <button
-    class="sprint w-100 text-start d-flex align-items-center"
+  <button
+    class=" w-100 text-start d-flex align-items-center" id="sprint"
     onclick="hid_accs()"
   >
     <span>
@@ -97,36 +113,84 @@ let sprint = ` <div class="border_of_tascks col-12 col-lg-10 ">
     demarer sprint
   </button>
 </div>
-<div class="list_de_task">
-  <!-- ------------------------------------------------------- -->
-  <!-- <button class="bg-white w-100 p-1 d-flex BorderDeTask">
-    <img
-      src="picturs/taskk.png"
-      class="imag-task me-2"
-      alt="task"
-    />
-    <p class="task m-0">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Temporibus quidem eligendi sit aliquam veniam ex voluptatum
-      saepe rem quos nulla minus blanditiis maxime, molestias modi
-      unde similique. Culpa, fugit consectetur.
-    </p>
-
-    <select name="afair" class="w-25" id="">
-      <option value="afair">afair</option>
-      <option value="afair">encour</option>
-      <option value="terminer">terminer</option>
-    </select>
-    <img
-      src="picturs/hwo write task.png"
-      class="hwo_write_task ms-2"
-      alt=""
-    />
-  </button> -->
- <!-- ----------------------------------------------------------- -->
+<div class="list_de_task" id="taskParent">
+ 
 </div>
-<button class=" w-100 p-1 d-flex CreatATask-Btn">+ creat a task</button>
+
+<button
+  type="button"
+  class="btn btn-primary btn-primary-1 w-100 p-1 d-flex"
+  data-bs-toggle="modal"
+  data-bs-target="#exampleModal"
+  data-bs-whatever="@mdo"
+>
+  + creat a task
+</button>
+
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">
+          New message
+        </h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label"
+              >Nam:</label
+            >
+            <input
+              type="text"
+              class="form-control w-100 input-name"
+              id="recipient-name"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label"
+              >User Story:</label
+            >
+            <textarea
+              class="form-control w-100"
+              id="message-text"
+            ></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-bs-dismiss="modal"
+        >
+          Close
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary CreatATask-Btn"
+          id="CreatATask"
+        >
+          creat task
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 </div>`;
-CreatSprintBtn.onclick = function() {
-  CreatSprintBtn.insertAdjacentHTML("beforebegin", sprint);
-}
+btnSprint.onclick = function () {
+  btnSprint.insertAdjacentHTML("beforebegin", sprint);
+
+};

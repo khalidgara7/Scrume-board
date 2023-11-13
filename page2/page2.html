@@ -370,11 +370,11 @@
             </svg>
           </div>
           <!-- start tableau de sprint -->
-          <div class="sprints"></div>
+
           <div class="border_of_tasks col-12 col-lg-10">
             <div class="w-100 position-relative sprint_parent">
               <button
-                class="sprint w-100 text-start d-flex align-items-center"
+                class=" w-100 text-start d-flex align-items-center" id="sprint"
                 onclick="hid_accs()"
               >
                 <span>
@@ -412,33 +412,8 @@
                 demarer sprint
               </button>
             </div>
-            <div class="list_de_task">
-              <!-- ------------------------------------------------------- -->
-              <!-- <button class="bg-white w-100 p-1 d-flex BorderDeTask">
-                <img
-                  src="picturs/taskk.png"
-                  class="imag-task me-2"
-                  alt="task"
-                />
-                <p class="task m-0">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Temporibus quidem eligendi sit aliquam veniam ex voluptatum
-                  saepe rem quos nulla minus blanditiis maxime, molestias modi
-                  unde similique. Culpa, fugit consectetur.
-                </p>
-
-                <select name="afair" class="w-25" id="">
-                  <option value="afair">afair</option>
-                  <option value="afair">encour</option>
-                  <option value="terminer">terminer</option>
-                </select>
-                <img
-                  src="picturs/hwo write task.png"
-                  class="hwo_write_task ms-2"
-                  alt=""
-                />
-              </button> -->
-              <!-- ----------------------------------------------------------- -->
+            <div class="list_de_task" >
+             
             </div>
 
             <button
@@ -479,7 +454,7 @@
                         >
                         <input
                           type="text"
-                          class="form-control w-100 input-name"
+                          class="form-control w-100 input-name inputName"
                           id="recipient-name"
                         />
                       </div>
@@ -488,10 +463,9 @@
                           >User Story:</label
                         >
                         <textarea
-                          class="form-control w-100"
-                          id="message-text input-user-story"
+                          class="form-control w-100 textarea-input"
+                          id="message-text"
                         ></textarea>
-                        <p id="StoryContent "></p>
                       </div>
                     </form>
                   </div>
@@ -506,20 +480,16 @@
                     <button
                       type="button"
                       class="btn btn-primary CreatATask-Btn"
-
+                     
                     >
-                      Send message
+                      creat task
                     </button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <button
-            class="w-25 p-1 d-flex CreatASprint-Btn justify-content-flex-end"
-          >
-            + creat a sprint
-          </button>
+          <button class="w-25 p-1 " id="CreatASprint-Btn">+ creat a sprint</button>
         </section>
       </main>
     </div>
