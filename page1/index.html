@@ -292,45 +292,15 @@
         </section>
 
         <section class="container">
-          <div class="box1 box">
+          <!-- <div class="box1 box">
             <div class="title" contenteditable="true">TO DO</div>
-
-            <div draggable="true" class="task tasktext">
-              <button
-                class="tassk"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
-              >
-                En tant qu'utilisateur,Bonus 1 : je souhaite voir un slider
-                interactif sur la page d'accueil du site pour découvrir
-                rapidement les produits et les informations mises en avant
-              </button>
-            </div>
           </div>
           <div class="box2 box">
             <div class="title" contenteditable="true">DOING</div>
-            <div draggable="true" class="task tasktext">
-              <button
-                data-bs-toggle="modal"
-                class="tassk"
-                data-bs-target="#exampleModal"
-              >
-                En tant qu'utilisateur,Bonus 1 : je souhaite voir un slider
-                interactif sur la page d'accueil du site pour découvrir
-                rapidement les produits et les informations mises en avant
-              </button>
-            </div>
           </div>
           <div class="box3 box">
             <div class="title" contenteditable="true">DONE</div>
-            <div draggable="true" class="task tasktext">
-              <button data-bs-toggle="modal" data-bs-target="#exampleModal">
-                En tant qu'utilisateur,Bonus 1 : je souhaite voir un slider
-                interactif sur la page d'accueil du site pour découvrir
-                rapidement les produits et les informations mises en avant
-              </button>
-            </div>
-          </div>
+          </div> -->
         </section>
         <!-- Modal -->
         <div
@@ -365,12 +335,10 @@
                   Description
                 </h1>
                 <p
-                  class="fw-lighter des-cont font des des-cont"
+                  class="fw-lighter des-cont font modalDes des-cont"
                   id="exampleModalLabel"
                   contenteditable="true"
-                >
-                  1
-                </p>
+                ></p>
                 <h1
                   class="modal-title fw-light fs-6 font"
                   id="exampleModalLabel "
@@ -422,6 +390,20 @@
                     participation continue !
                   </div>
                 </div>
+                <div class="status font">
+                  <h1
+                    class="modal-title fw-light fs-6 font"
+                    id="exampleModalLabel "
+                  >
+                    status
+                  </h1>
+                  <select id="taksstatus" aria-label=" select example">
+                    <!-- <option selected>Open this select menu</option> -->
+                    <option value="1">ToDO</option>
+                    <option value="2">Doing</option>
+                    <option value="3">Done</option>
+                  </select>
+                </div>
               </div>
               <div class="modal-footer">
                 <button
@@ -432,7 +414,7 @@
                   Close
                 </button>
                 <button
-                  onclick="change()"
+                  onclick="saveTask()"
                   type="button"
                   class="btn save btn-primary font"
                   data-bs-dismiss="modal"

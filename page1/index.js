@@ -1,27 +1,60 @@
-let btn = document.querySelector(".ajout");
-let input = document.querySelector(".inp");
-let boxs = document.querySelectorAll(".box");
-var drag = null;
+const addButtonElement = document.querySelector(".ajout");
+const input = document.querySelector(".inp");
+const title = document.querySelector("#exampleModalLabel");
+const description = document.querySelector(".modalDes");
+const des = document.querySelector(".des");
+const taskinterface = document.getElementsByClassName("des");
+const modal = document.getElementById("exampleModal");
+const cont = document.getElementsByClassName("container");
+const status = document.querySelector("select");
+let selectedTaskId = null;
+let drag = null;
 
-btn.onclick = function () {
+const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+cont[0].innerHTML += `<div class="box1 box">
+<div class="title" contenteditable="true">TO DO</div>
+</div>
+<div class="box2 box">
+<div class="title" contenteditable="true">DOING</div>
+</div>
+<div class="box3 box">
+<div class="title" contenteditable="true">DONE</div>
+</div>
+`;
+
+const boxs = document.querySelectorAll(".box");
+
+// EVENTS
+modal.addEventListener("shown.bs.modal", function (e) {
+  selectedTaskId = e.relatedTarget.dataset.id;
+  description.innerHTML = tasks[selectedTaskId - 1].description;
+  title.innerHTML = tasks[selectedTaskId - 1].titre;
+  status.value = tasks[selectedTaskId - 1].status;
+});
+
+addButtonElement.addEventListener("click", function (e) {
   if (input.value !== "") {
+    addTask({
+      id: tasks.length + 1,
+      description: input.value,
+      titre: input.value,
+      status: 1,
+    });
+
     boxs[0].innerHTML += `<div draggable="true" class="task tasktext">
-              <button data-bs-toggle="modal" data-bs-target="#exampleModal">
-              ${input.value}
-              </button>
-            </div>`;
+    <button
+      class="des"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+      data-id="${tasks[tasks.length - 1].id}"
+    >
+              ${tasks[tasks.length - 1].description}
+    </button>
+    </div>`;
     input.value = "";
   }
-};
-function editTask(editButton) {
-  const task = editButton.parentElement;
-  console.log(task);
-  const taskText = task.querySelector(".task-text");
-  const newText = prompt("Edit Task:", taskText.textContent);
-  if (newText !== null) {
-    taskText.textContent = newText;
-  }
-}
+});
 
 // dragstart
 document.addEventListener("dragstart", (e) => {
@@ -61,10 +94,39 @@ boxs.forEach((box) => {
     }
   });
 });
-var description = document.querySelector(".des");
-var des = document.querySelector(".tassk");
-console.log(description.innerHTML);
-console.log(des.innerHTML);
-function change() {
-  des.innerHTML = description.innerHTML;
+
+// FUNCTIONS
+
+function setLocalstorage(tasks) {
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+function saveTask() {
+  tasks[selectedTaskId - 1].description = description.innerHTML;
+  taskinterface[selectedTaskId - 1].innerHTML =
+    tasks[selectedTaskId - 1].description;
+  tasks[selectedTaskId - 1].titre = title.innerHTML;
+  tasks[selectedTaskId - 1].status = status.value;
+  setLocalstorage(tasks);
+}
+
+// function update ui on every tasks changes
+
+function addTask(task) {
+  tasks.push(task);
+  setLocalstorage(tasks);
+}
+
+for (let i = 0; i < tasks.length; i++) {
+  const task = tasks[i];
+  boxs[0].innerHTML += `<div draggable="true" class="task tasktext">
+  <button
+    class="des"
+    data-bs-toggle="modal"
+    data-bs-target="#exampleModal"
+    data-id="${task.id}"
+  >
+    ${task.description}
+  </button>
+  </div>`;
 }
